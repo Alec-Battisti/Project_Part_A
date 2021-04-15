@@ -28,12 +28,16 @@ always @(posedge Clk, posedge Reset)
     
 always@(*)              //Takes all inputs and watches if they change
     case(Present_State) //This is where the pattern begins
-    S0: Next_State = S1;    
-    S1: Next_State = S2;
-    S2: Next_State = S3;
-    S3: Next_State = S4;
-    S4: Next_State = S5;
-    S5: Next_State = S0;
+    S0: Next_State = S1;    // Transitions from 0 -> 1
+    S1: Next_State = S2;    // Transitions from 1 -> 2
+    S2: Next_State = S3;    // Transitions from 2 -> 3
+    S3: Next_State = S4;    // Transitions from 3 -> 4
+    S4: Next_State = S5;    // Transitions from 4 -> 5
+    S5: Next_State = S6;    // Transitions from 5 -> 6
+    S6: Next_State = S7;    // Transitions from 6 -> 7
+    S7: Next_State = S8;    // Transitions from 7 -> 8
+    S8: Next_State = S9;    // Transitions from 8 -> 9
+    S9: Next_State = S0;    // Transitions from 9 -> 0
     
     default: Next_State = S0;   //Stops errors from occuring 
 endcase
