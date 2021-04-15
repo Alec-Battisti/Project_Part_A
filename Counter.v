@@ -38,6 +38,6 @@ always@(*)              //Takes all inputs and watches if they change
     default: Next_State = S0;   //Stops errors from occuring 
 endcase
 
-assign W = Present_State[3:0]; //Final Output    
+assign Q = Present_State[3:0]; //Final Output    
     
 endmodule
