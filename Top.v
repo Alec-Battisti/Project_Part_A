@@ -14,7 +14,7 @@ module Top(
     Counter (.Clk(Slow_Clk_Divider), .Reset(Reset), .Q(Counter_Output));
     Bin_7Segment(.Bin(Counter_Output), .Seven_Segment(display));
     
-    assign Anode = 8'hFE;                  //Activates the appropriate anodes for the 7 segment display
+    assign Anode = AN;                  //Activates the appropriate anodes for the 7 segment display
 
     
 endmodule
